@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Junyi Du</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="middle-area">
+    <div class="avatar-background hide-before-load hide-when-leave">
+        <a class="avatar-link" href="http://saekano.wikia.com/wiki/Megumi_Kato" rel="noopener noreferrer" target="_blank"  title="Megumi Kato?"></a>
+    </div>
+    
+    <div class="title hide-before-load hide-when-leave" style="font-family: calligraffittiregular">
+        junyidu
+    </div>
+    
+    <div class="annotate hide-before-load hide-when-leave">
+    smile
+    </div>
+
+    <hr class="divider hide-when-leave">
+    
+    <ul class="bar load-animation-slow hide-when-leave">
+        <!--li class="item">
+            <a href="./posts.html" onclick="leave_for()">Posts</a>
+            <span class="vertical-divider">|</span>
+        </li-->
+        
+        <li class="item">
+            <a href="./resume_junyidu.pdf" rel="noopener noreferrer" target="_blank">Résumé</a>
+            <span class="vertical-divider">|</span>
+        </li>
+
+        <li class="item">
+            <a href="https://github.com/cnrpman" rel="noopener noreferrer" target="_blank">Github</a>
+            <!--span class="vertical-divider">|</span-->
+        </li>
+
+        <li class="item">
+            <a href="linkedin.com/in/junyi-du" onclick="leave_for()">About</a>
+        </li>
+    </ul>
+</div>
+<script>
+    function leave_for(url){
+        var eoi = document.getElementsByClassName("hide-when-leave");
+        var ele_list = []
+        for (var i = 0; i < eoi.length; i++){
+            eoi[i].classList.add("hide-animation")
+        }
+        //window.location = url
+    }
+    
+    /*
+    function leave_for_about(){
+        var eoi = document.getElementsByClassName("up-when-leave");
+        var ele_list = []
+        for (var i = 0; i< eoi.length; i++){
+            eoi[i].classList.add("v
+        }
+    }*/
+
+    window.onload = function(){
+        //resource loaded animation
+        var eoi = document.getElementsByClassName("hide-before-load");
+        var ele_list = []
+        for(var i = 0; i < eoi.length; i++){
+           ele_list.push(eoi[i])
+        }
+        
+        ele_list.forEach(function(e){
+            e.classList.remove("hide-before-load")
+            e.classList.add("load-animation")
+        })
+        
+        //then, pre-loading
+        var img = new Image(); 
+        img.src = "/images/Avatar_gray.jpg";
+    };
+</script>
