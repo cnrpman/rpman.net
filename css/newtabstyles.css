@@ -1,0 +1,60 @@
+@font-face {
+    font-family: anaphora;
+    src: url(/anaphora.trial-thin.ttf);
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hide-before-load {
+    opacity: 0;
+}
+
+.load-animation {
+    animation: fadeIn 1s forwards;
+}
+
+div,body {
+    margin: 0;
+    padding: 0;
+}
+
+#newtab-background{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/images/lily3.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    
+    position: relative;
+}
+
+#link-holder{
+    position: absolute;
+    top: 0;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: anaphora, serif;
+    margin: 0 0.2em;
+    background-color: rgb(255,255,255,0.1);
+    border-radius: 0.25em;
+    padding: 0 0.2em;
+    box-shadow: 1px 1px 1px rgb(0,0,0,0.15);
+}
+
+a:hover{
+    background-color: rgb(255,255,255,0.2);
+    box-shadow: 0px 0px 0px rgb(0,0,0,0.15);
+}
