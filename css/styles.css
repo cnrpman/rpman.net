@@ -77,7 +77,7 @@ html body {
     height: 150px;
     
     border-radius: 50%;
-    background-image: url("/images/Avatar_rgb.jpg");
+    background-image: url("/images/Avatar_rgb.png");
     background-size: cover;
     background-position: center; 
     
@@ -87,7 +87,7 @@ html body {
 }
 
 .avatar-background:hover{
-    background-image: url("/images/Avatar_gray.jpg")
+    background-image: url("/images/Avatar_gray.png")
 }
 
 .avatar-link {
